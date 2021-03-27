@@ -8,9 +8,18 @@ import yfinance as yf
 st.set_option('deprecation.showPyplotGlobalUse', False)
 st.set_page_config(page_title='S&P 500 Exploratory Data Analysis', page_icon="./f.png")
 
-st.title('S&P 500 App')
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
+st.title('S&P 500 App')
+st.subheader('By [Francisco Tarantuviez](https://www.linkedin.com/in/francisco-tarantuviez-54a2881ab/) -- [Other Projects](https://franciscot.dev/portfolio)')
 st.markdown("""
+---
 This app retrieves the list of the **S&P 500** (from Wikipedia) and its corresponding **stock closing price** (year-to-date)!
 * **Python libraries:** base64, pandas, streamlit, numpy, matplotlib, seaborn
 * **Data source:** [Wikipedia](https://en.wikipedia.org/wiki/List_of_S%26P_500_companies).
@@ -82,3 +91,12 @@ if st.button('Show Plots'):
   st.header('Stock Closing Price')
   for i in list(df_selected_sector.Symbol)[:num_company]:
     price_plot(i)
+
+# This app repository
+
+st.write("""
+## App repository
+
+[Github](https://github.com/ftarantuviez/Exploratory-Data-Analysis-Nhanes-Univariate)
+""")
+# / This app repository
