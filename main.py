@@ -97,6 +97,6 @@ if st.button('Show Plots'):
 st.write("""
 ## App repository
 
-[Github](https://github.com/ftarantuviez/Exploratory-Data-Analysis-Nhanes-Univariate)
+[Github](https://github.com/ftarantuviez/Exploratory-Data-Analysis-SP500-Stock-Price)
 """)
 # / This app repository
